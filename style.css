@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'LeagueSpartan';
+
+  src: url(fonts/LeagueSpartan-VariableFont_wght.ttf) format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --veryDarkMagenta: hsl(300, 43%, 22%);
+  --softPink: hsl(333, 80%, 67%);
+
+  --darkGrayishMagenta: hsl(303, 10%, 53%);
+  --lightGrayishMagenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'LeagueSpartan', sans-serif;
+  font-weight: 400;
+
+  font-size: 1rem;
+  color: var(--white);
+}
+.main_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: auto;
+  background: var(--white);
+  padding: 1.5rem;
+  background-image: url(images/bg-pattern-top-mobile.svg),
+    url(images/bg-pattern-bottom-mobile.svg);
+  background-position: right 56px top 0px, left 32px bottom 0px;
+  background-repeat: no-repeat;
+
+  margin: 0 auto;
+}
+.content_area {
+  min-width: 350px;
+  padding: 1.5rem;
+}
+
+.first_area {
+  text-align: center;
+}
+.first_area h1 {
+  font-size: 2.3125rem;
+  line-height: 1.875rem;
+  color: var(--veryDarkMagenta);
+  padding: 1.5rem;
+  font-weight: 700;
+}
+.first_area p {
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  color: var(--darkGrayishMagenta);
+
+  margin-bottom: 40px;
+}
+
+.star_area {
+  text-align: center;
+  background: var(--lightGrayishMagenta);
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+.star_area img {
+  display: inline-block;
+  padding-bottom: 13px;
+}
+.star_area p {
+  color: var(--veryDarkMagenta);
+  font-weight: 700;
+}
+
+.profile_area {
+  background: var(--veryDarkMagenta);
+  padding: 32px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+.profile_area .profile_top {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  margin-bottom: 1.5rem;
+}
+.profile_top img {
+  display: block;
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+.name p {
+  color: var(--softPink);
+}
+.profile_area p {
+  font-size: 1.03125rem;
+  line-height: 1.375rem;
+}
+
+@media (min-width: 1000px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main_area {
+    background-image: url(images/bg-pattern-top-desktop.svg),
+      url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left -269px top 0px, left 225px bottom 0px;
+  }
+
+  .top_area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 46px;
+  }
+  .first_area {
+    flex-basis: 420px;
+    text-align: left;
+  }
+  .first_area h1 {
+    padding-left: 0;
+  }
+  .first_area p {
+    margin-bottom: 24px;
+  }
+
+  .second_area {
+    flex-basis: 540px;
+    padding-left: 16px;
+  }
+  .star_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .star_area img {
+    padding-bottom: 0;
+  }
+  .star_area p {
+    padding-left: 16px;
+  }
+  .star_area:first-child {
+    margin: 0 96px 16px 0;
+  }
+  .star_area:nth-child(2) {
+    margin: 0 48px 16px;
+  }
+  .star_area:last-child {
+    margin: 0 0 0 96px;
+  }
+
+  .bottom_area {
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile_area {
+    width: 32%;
+    margin-bottom: 0;
+    padding: 36px 32px 39px;
+  }
+  .profile_area:first-child {
+    margin-bottom: 32px;
+  }
+  .profile_area:nth-child(2) {
+    margin: 16px 0;
+  }
+  .profile_area:nth-child(3) {
+    margin: 32px 0 0;
+  }
+  .profile_area .profile_top {
+    margin-bottom: 16px;
+  }
+  .profile_area p {
+    line-height: 1.4375rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main_area {
+    width: 1440px;
+    height: 800px;
+    background-position: left 10px top 0px, right 0px bottom 0px;
+    position: fixed;
+  }
+  .content_area {
+    width: 1110px;
+    height: auto;
+    padding: 0;
+    margin: 24px;
+  }
+
+  .first_area h1 {
+    font-size: 3.5rem;
+    line-height: 3rem;
+    letter-spacing: -2px;
+  }
+
+  .second_area {
+    padding-left: 0;
+  }
+
+  .star_area {
+    padding-left: 32px;
+    justify-content: left;
+    padding: 20px 32px;
+  }
+  .star_area p {
+    padding-left: 24px;
+  }
+  .star_area img {
+    padding-right: 8px;
+  }
+  .profile_area {
+    width: 350px;
+  }
+  .profile_area span {
+    display: block;
+  }
+}
